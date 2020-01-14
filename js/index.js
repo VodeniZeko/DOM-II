@@ -33,3 +33,35 @@ home.addEventListener("keydown", e => {
     });
   }
 });
+
+const text = document.querySelectorAll("div > h2");
+const para = document.querySelectorAll("header > p");
+
+var tl = gsap.timeline({ defaults: { duration: 1, ease: "none" } });
+
+window.addEventListener("load", () => {
+  tl.to("div > h2", {
+    duration: 3,
+    font: 50,
+    color: "#660000"
+  });
+});
+
+const img1 = document.querySelector("div > img:nth-child(1)");
+const img2 = document.querySelector(".img-fluid");
+img1.addEventListener("wheel", e => {
+  e.preventDefault();
+  console.log(e);
+  let scale = 1;
+  scale = Math.min(Math.max(0.125, scale), 4);
+  scale += event.deltaY * -0.01;
+  img1.style.transform = `scale(${scale})`;
+});
+img2.addEventListener("wheel", e => {
+  e.preventDefault();
+  console.log(e);
+  let scale = 1;
+  scale = Math.min(Math.max(0.125, scale), 4);
+  scale += event.deltaY * -0.01;
+  img2.style.transform = `scale(${scale})`;
+});
