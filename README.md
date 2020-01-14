@@ -34,14 +34,14 @@ Fun Bus wants you to make their site more interactive. They are relying on you t
 ## Task 2: Create Unique Event Listeners
 
 - [ ] Using your [index.js file](js/index.js), create 10 [unique event listeners](https://developer.mozilla.org/en-US/docs/Web/Events). using your creativity to make the Fun Bus site more interactive. Here are some unique events you could try to use:
-      _ [ ] `mouseover`
-      _ [ ] `keydown`
-      _ [ ] `wheel`
+      _ [x] `mouseover`
+      _ [x] `keydown`
+      _ [x] `wheel`
       _ [ ] `drag / drop`
-      _ [ ] `load`
+      _ [x] `load`
       _ [ ] `focus`
-      _ [ ] `resize`
-      _ [ ] `scroll`
+      _ [x] `resize`
+      _ [x] `scroll`
       _ [ ] `select`
       _ [ ] `dblclick`
 

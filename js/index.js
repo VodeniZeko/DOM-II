@@ -72,3 +72,25 @@ window.addEventListener("resize", e => {
     skewX: 180
   });
 });
+
+window.scrollTo({
+  top: 300,
+  left: 100,
+  behavior: "smooth"
+});
+
+const a = document.querySelectorAll("p");
+Array.from(a).forEach(item =>
+  item.addEventListener("click", () => {
+    item.style.color = "#fff";
+  })
+);
+
+const wl = document.querySelector("header > h2");
+wl.addEventListener("dblclick", e => {
+  gsap.to("header > h2", {
+    rotateX: -200,
+    yoyo: true,
+    repeat: 1
+  });
+});
