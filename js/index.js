@@ -51,7 +51,6 @@ const img1 = document.querySelector("div > img:nth-child(1)");
 const img2 = document.querySelector(".img-fluid");
 img1.addEventListener("wheel", e => {
   e.preventDefault();
-  console.log(e);
   let scale = 1;
   scale = Math.min(Math.max(0.125, scale), 4);
   scale += event.deltaY * -0.01;
@@ -59,9 +58,17 @@ img1.addEventListener("wheel", e => {
 });
 img2.addEventListener("wheel", e => {
   e.preventDefault();
-  console.log(e);
   let scale = 1;
   scale = Math.min(Math.max(0.125, scale), 4);
   scale += event.deltaY * -0.01;
   img2.style.transform = `scale(${scale})`;
+});
+
+const bus = document.querySelector("header > img");
+
+window.addEventListener("resize", e => {
+  gsap.to("header > img", {
+    skewY: -180,
+    skewX: 180
+  });
 });
